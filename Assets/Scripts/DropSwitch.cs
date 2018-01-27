@@ -8,6 +8,8 @@ public class DropSwitch : MonoBehaviour {
 	private Toggleable[] effects;
 	[SerializeField]
 	GameObject key;
+	[SerializeField]
+	private bool deleteKey = false;
 
 	private bool activated = false;
 
@@ -16,6 +18,10 @@ public class DropSwitch : MonoBehaviour {
 			foreach (var t in effects) {
 				t.Toggle ();
 			}
+			if (deleteKey) {
+				key.SetActive (false);
+			}
+
 			activated = true;
 		}
 	}
