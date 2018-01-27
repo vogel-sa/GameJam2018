@@ -4,8 +4,13 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour {
 	
-    public GameObject item;
+	public Storeable item;
+
 	public Sprite itemImage;
+
+	[SerializeField]
+	private Vector2 offset = Vector2.zero; // Where to place in relation to player?
+
     private static Inventory _instance;
     public static Inventory Instance
     {
@@ -19,7 +24,7 @@ public class Inventory : MonoBehaviour {
         }
     }
 	//Adds the item to the inventory, if the inventory is not empty, return the item that was in the inventory
-    public void addItem(GameObject toAdd)
+	public void addItem(Storeable toAdd)
 	{
         
 		item = toAdd;
@@ -31,10 +36,17 @@ public class Inventory : MonoBehaviour {
     public void removeItem()
     {
 
-        item.SetActive(true);
-        if()
-        item.gameObject.transform.position = MovePlayer.Instance.currPlayer.transform.position;
-        item = null;
+        
+		if(!Physics2D.CircleCast((Vector2)MovePlayer.Instance.currPlayer.transform.position + offset,
+			item.GetComponent<CircleCollider2D>().radius,
+			Vector2.zero,
+			0f,
+			LayerMask.GetMask("Wall")))
+		{
+			item.gameObject.SetActive(true);
+        	item.gameObject.transform.position = MovePlayer.Instance.currPlayer.transform.position;
+        	item = null;
+		}
 
     }
 }

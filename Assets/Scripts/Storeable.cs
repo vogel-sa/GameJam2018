@@ -16,7 +16,7 @@ public class Storeable : MonoBehaviour
 	void Update () {
         if(Input.GetKeyDown(KeyCode.E)){
             gameObject.SetActive(false);
-            Inventory.Instance.addItem(gameObject);
+            Inventory.Instance.addItem(this);
             //TODO Store the item
         }
 	}
