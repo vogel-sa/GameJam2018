@@ -4,11 +4,24 @@ using UnityEngine;
 
 public class MovePlayer : MonoBehaviour
 {
+	private static MovePlayer _instance;
+	public static MovePlayer Instance
+	{
+		get
+		{
+			if (!_instance && !(_instance = FindObjectOfType<MovePlayer>()))
+			{
+				_instance = new GameObject ().AddComponent<MovePlayer> ();
+			}
+			return _instance;
+		}
+	}
 	[SerializeField]
 	private float speed = 5f;
 	[SerializeField]
 	private Rigidbody2D _currPlayer;
-	public Rigidbody2D currPlayer {
+	public Rigidbody2D currPlayer
+	{
 		get
 		{
 			return _currPlayer;
@@ -19,13 +32,6 @@ public class MovePlayer : MonoBehaviour
 		}
 	}
 
-	// Use this for initialization
-	void Start ()
-	{
-		
-	}
-	
-	// Update is called once per frame
 	void Update ()
 	{
 		float vertical = Input.GetAxisRaw ("Vertical");
