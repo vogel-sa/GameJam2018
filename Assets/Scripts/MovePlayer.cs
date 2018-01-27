@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class MovePlayer : MonoBehaviour
 {
 	private static MovePlayer _instance;
@@ -18,8 +19,9 @@ public class MovePlayer : MonoBehaviour
 	}
 	[SerializeField]
 	private float speed = 5f;
+	public float radius = 0f;
 	[SerializeField]
-	private Rigidbody2D _currPlayer;
+	public Rigidbody2D _currPlayer;
 	public Rigidbody2D currPlayer
 	{
 		get
@@ -30,6 +32,11 @@ public class MovePlayer : MonoBehaviour
 		{
 			_currPlayer = value;
 		}
+	}
+
+	void Start()
+	{
+		radius = currPlayer.GetComponent<CircleCollider2D> ().radius * currPlayer.transform.localScale.x;
 	}
 
 	void Update ()
