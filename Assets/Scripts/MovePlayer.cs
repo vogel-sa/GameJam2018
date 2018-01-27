@@ -7,8 +7,8 @@ public class MovePlayer : MonoBehaviour
 	[SerializeField]
 	private float speed = 5f;
 	[SerializeField]
-	private Transform _currPlayer;
-	public Transform currPlayer {
+	private Rigidbody2D _currPlayer;
+	public Rigidbody2D currPlayer {
 		get
 		{
 			return _currPlayer;
@@ -28,8 +28,10 @@ public class MovePlayer : MonoBehaviour
 	// Update is called once per frame
 	void Update ()
 	{
-		float vertical = Input.GetAxis ("Vertical");
-		float horizontal = Input.GetAxis ("Horizontal");
-		currPlayer.Translate(new Vector3(horizontal, vertical, 0f));
+		float vertical = Input.GetAxisRaw ("Vertical");
+		float horizontal = Input.GetAxisRaw ("Horizontal");
+		Vector3 vec = new Vector3 (horizontal, vertical, 0f);
+		vec *= speed;
+		currPlayer.velocity = vec;
 	}
 }
