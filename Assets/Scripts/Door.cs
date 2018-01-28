@@ -34,7 +34,7 @@ public class Door : MonoBehaviour {
 					closer = side1;
 					campos = cam1.position;
 				}
-				MovePlayer.Instance.currPlayer.MovePosition (closer);
+				MovePlayer.Instance.currPlayer.transform.position = closer;
 				Camera.main.transform.position = campos;
 			}
 		}
