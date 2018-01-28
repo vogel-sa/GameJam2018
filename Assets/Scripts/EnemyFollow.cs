@@ -26,13 +26,6 @@ public class EnemyFollow : MonoBehaviour {
 		}
 	}
 
-	void OnCollisionEnter2D(Collision2D col)
-	{
-		if (col.collider.gameObject.tag == "Character") {
-
-		}
-	}
-
 	void OnDrawGizmos()
 	{
 		Gizmos.color = Color.cyan;
