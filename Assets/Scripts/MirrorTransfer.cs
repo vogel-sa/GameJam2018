@@ -44,6 +44,7 @@ public class MirrorTransfer : MonoBehaviour {
 				.First ();
 
 			Camera.main.transform.position = closest.position;
+			canSwap = false;
 		}
 
 	}

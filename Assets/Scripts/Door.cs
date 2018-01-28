@@ -60,7 +60,5 @@ public class Door : MonoBehaviour {
 		Gizmos.color = Color.cyan;
 		Gizmos.DrawSphere (side1, .1f);
 		Gizmos.DrawSphere (side2, .1f);
-		//Gizmos.DrawSphere (cam1.position, .1f);
-		//Gizmos.DrawSphere (cam2.position, .1f);
 	}
 }

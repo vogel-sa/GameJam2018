@@ -24,6 +24,7 @@ public class Switch : MonoBehaviour {
 			foreach (var t in effects) {
 				t.Toggle ();
 			}
+			enabled = false;
 		}
 
 	}

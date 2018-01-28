@@ -1,15 +1,17 @@
 fileFormatVersion: 2
-guid: 695e4e53ceac4284980edd255b744d70
-timeCreated: 1517124198
+guid: 4d8734badba5f3b43b70c61988388d36
+timeCreated: 1517124501
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: room_13_0
-    21300002: room_13_1
-    21300004: room_13_2
-    21300006: room_13_3
-    21300008: room_13_4
-    21300010: room_13_5
+    21300000: room_10_updated_0
+    21300002: room_10_updated_1
+    21300004: room_10_updated_2
+    21300006: room_10_updated_3
+    21300008: room_10_updated_4
+    21300010: room_10_updated_5
+    21300012: room_10_updated_6
+    21300014: room_10_updated_7
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -37,7 +39,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
+    filterMode: 0
     aniso: -1
     mipBias: -1
     wrapU: 1
@@ -84,7 +86,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: room_13_0
+      name: room_10_updated_0
       rect:
         serializedVersion: 2
         x: 0
@@ -98,7 +100,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: room_13_1
+      name: room_10_updated_1
       rect:
         serializedVersion: 2
         x: 256
@@ -112,7 +114,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: room_13_2
+      name: room_10_updated_2
       rect:
         serializedVersion: 2
         x: 512
@@ -126,7 +128,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: room_13_3
+      name: room_10_updated_3
       rect:
         serializedVersion: 2
         x: 768
@@ -140,7 +142,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: room_13_4
+      name: room_10_updated_4
       rect:
         serializedVersion: 2
         x: 1024
@@ -154,10 +156,38 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: room_13_5
+      name: room_10_updated_5
       rect:
         serializedVersion: 2
         x: 1280
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: room_10_updated_6
+      rect:
+        serializedVersion: 2
+        x: 1536
+        y: 0
+        width: 256
+        height: 256
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: room_10_updated_7
+      rect:
+        serializedVersion: 2
+        x: 1792
         y: 0
         width: 256
         height: 256
