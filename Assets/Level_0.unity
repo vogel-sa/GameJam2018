@@ -190,7 +190,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1436429371}
     m_Modifications:
     - target: {fileID: 4435700515855992, guid: e1dbd5ec79d13324b8c2d9118b2038a6, type: 2}
       propertyPath: m_LocalPosition.x
@@ -206,15 +206,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4435700515855992, guid: e1dbd5ec79d13324b8c2d9118b2038a6, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4435700515855992, guid: e1dbd5ec79d13324b8c2d9118b2038a6, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4435700515855992, guid: e1dbd5ec79d13324b8c2d9118b2038a6, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4435700515855992, guid: e1dbd5ec79d13324b8c2d9118b2038a6, type: 2}
       propertyPath: m_LocalRotation.w
@@ -222,11 +222,16 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4435700515855992, guid: e1dbd5ec79d13324b8c2d9118b2038a6, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1dbd5ec79d13324b8c2d9118b2038a6, type: 2}
   m_IsPrefabParent: 0
+--- !u!4 &415944171 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4435700515855992, guid: e1dbd5ec79d13324b8c2d9118b2038a6,
+    type: 2}
+  m_PrefabInternal: {fileID: 415944170}
 --- !u!1 &773563181
 GameObject:
   m_ObjectHideFlags: 0
@@ -630,8 +635,8 @@ Camera:
   m_GameObject: {fileID: 1266868307}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
@@ -883,6 +888,7 @@ Transform:
   - {fileID: 1255537142}
   - {fileID: 1846474739}
   - {fileID: 1134247484}
+  - {fileID: 415944171}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
