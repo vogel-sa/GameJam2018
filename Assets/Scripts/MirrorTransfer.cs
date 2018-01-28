@@ -35,13 +35,15 @@ public class MirrorTransfer : MonoBehaviour {
 	void Update()
 	{
 		if (Input.GetKeyDown (KeyCode.E) && canSwap) {
-			var closest = camPosns.OrderBy (x => Vector2.Distance (x.position, MovePlayer.Instance.currPlayer.transform.position))
-				.First ();
-				
-			Camera.main.transform.position = closest.position;
+			
 			MovePlayer.Instance.currPlayer.velocity = Vector3.zero;
 			MovePlayer.Instance.currPlayer = chars.Where (x => x.GetComponent<Rigidbody2D> () != MovePlayer.Instance.currPlayer)
 				.First ().GetComponent<Rigidbody2D>();
+
+			var closest = camPosns.OrderBy (x => Vector2.Distance (x.position, MovePlayer.Instance.currPlayer.transform.position))
+				.First ();
+
+			Camera.main.transform.position = closest.position;
 		}
 
 	}
