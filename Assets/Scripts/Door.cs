@@ -25,7 +25,7 @@ public class Door : MonoBehaviour {
 				SceneManager.LoadScene (nextScene);
 			} else {
                 // PLaY OPEN DOOR SOUND
-                this.transform.parent.GetComponent<AudioSource>().Play();
+                this.GetComponent<AudioSource>().Play();
 				Vector2 charpos = MovePlayer.Instance.currPlayer.transform.position;
 				Vector2 closer;
 				Vector3 campos;
