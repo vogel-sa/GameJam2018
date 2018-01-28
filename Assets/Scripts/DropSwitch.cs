@@ -18,7 +18,7 @@ public class DropSwitch : MonoBehaviour {
 			foreach (var t in effects) {
 				t.Toggle ();
 			}
-			if (deleteKey) {
+			if (key && deleteKey) {
 				key.SetActive (false);
 			}
 
