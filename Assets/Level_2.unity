@@ -3957,10 +3957,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraZ: 0
-  side1: {x: -10.66, y: -3.79}
+  side1: {x: -10.5, y: -3.79}
   side2: {x: -10.5, y: -6.54}
-  cam1: {fileID: 479286765}
-  cam2: {fileID: 858744868}
+  cam1: {fileID: 858744868}
+  cam2: {fileID: 479286765}
   isSceneTransition: 0
   nextScene: 
 --- !u!61 &1517736766
