@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 2378c5e7e93e7b04c9d304d060709b14
-timeCreated: 1517168026
+guid: f38c6df785e8020459064efaa904f6ca
+timeCreated: 1517168796
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: room_12_0
-    21300002: room_12_1
-    21300004: room_12_2
-    21300006: room_12_3
+    21300000: room_15_updated_0
+    21300002: room_15_updated_1
+    21300004: room_15_updated_2
+    21300006: room_15_updated_3
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -82,7 +82,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: room_12_0
+      name: room_15_updated_0
       rect:
         serializedVersion: 2
         x: 0
@@ -96,7 +96,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: room_12_1
+      name: room_15_updated_1
       rect:
         serializedVersion: 2
         x: 256
@@ -110,7 +110,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: room_12_2
+      name: room_15_updated_2
       rect:
         serializedVersion: 2
         x: 512
@@ -124,7 +124,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: room_12_3
+      name: room_15_updated_3
       rect:
         serializedVersion: 2
         x: 768
