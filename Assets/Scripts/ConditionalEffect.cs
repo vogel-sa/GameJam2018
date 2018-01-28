@@ -10,11 +10,11 @@ public class ConditionalEffect : MonoBehaviour {
 	void Update () {
 		foreach (var c in conditions) {
 			if (!c.cond) {
-				break;
-			} else {
-				foreach (var t in effects)
-					t.Toggle ();
+				return;
 			}
 		}
+		foreach (var t in effects)
+			t.Toggle ();
+		gameObject.SetActive (false);
 	}
 }
