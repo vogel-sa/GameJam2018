@@ -25,4 +25,6 @@ public class DropSwitch : MonoBehaviour {
 			activated = true;
 		}
 	}
+
+
 }

@@ -9,7 +9,9 @@ public class Door : MonoBehaviour {
 	[SerializeField]
 	float cameraZ = 0;
 	[SerializeField]
-	Vector2 side1, side2, cam1, cam2;
+	Vector2 side1, side2;
+	[SerializeField]
+	Transform cam1, cam2;
 	private bool closeEnough = false;
 	[SerializeField]
 	private bool isSceneTransition = false;
@@ -27,10 +29,10 @@ public class Door : MonoBehaviour {
 				Vector3 campos;
 				if (Vector2.Distance (charpos, side1) < Vector2.Distance (charpos, side2)) {
 					closer = side2;
-					campos = new Vector3(cam2.x, cam2.y, cameraZ);
+					campos = cam2.position;
 				} else {
 					closer = side1;
-					campos = new Vector3(cam1.x, cam1.y, cameraZ);
+					campos = cam1.position;
 				}
 				MovePlayer.Instance.currPlayer.MovePosition (closer);
 				Camera.main.transform.position = campos;
@@ -58,7 +60,7 @@ public class Door : MonoBehaviour {
 		Gizmos.color = Color.cyan;
 		Gizmos.DrawSphere (side1, .1f);
 		Gizmos.DrawSphere (side2, .1f);
-		Gizmos.DrawSphere (cam1, .1f);
-		Gizmos.DrawSphere (cam2, .1f);
+		//Gizmos.DrawSphere (cam1.position, .1f);
+		//Gizmos.DrawSphere (cam2.position, .1f);
 	}
 }
