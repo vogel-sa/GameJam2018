@@ -1,50 +1,51 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class MirrorTransfer : MonoBehaviour {
 	[SerializeField]
 	private GameObject[] chars;
 	[SerializeField]
-	private GameObject[] interactUI;
-	[SerializeField]
-	private string[] interactButtons;
+	private Transform camPosParent;
+	private Transform[] camPosns;
+
+	public bool canSwap = false;
 
 	void Start()
 	{
-		foreach (var ui in interactUI) ui.SetActive(false);
+		camPosns = camPosParent.GetComponentsInChildren<Transform> ();
+		canSwap = false;
 	}
 
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		if (MovePlayer.Instance.currPlayer.gameObject == col.gameObject)
-			for (int i = 0; i < interactUI.Length; i++) {
-				if (MovePlayer.Instance.currPlayer.gameObject != chars[i])
-					interactUI[i].SetActive (true);
-			}
+		if (col.gameObject == MovePlayer.Instance.currPlayer.gameObject)
+			canSwap = true;
 	}
 
 	void OnTriggerExit2D(Collider2D col)
 	{
-		if (MovePlayer.Instance.currPlayer.gameObject == col.gameObject)
-			for (int i = 0; i < interactUI.Length; i++) {
-				//if (MovePlayer.Instance.currPlayer.gameObject != chars[i])
-					interactUI[i].SetActive (false);
-			}
+		if (col.gameObject == MovePlayer.Instance.currPlayer.gameObject)
+			canSwap = false;
 	}
+
+
 
 	void Update()
 	{
-		for (int i = 0; i < interactButtons.Length; i++) {
-			
-			if (Input.GetKeyDown (interactButtons[i])) {
-				MovePlayer.Instance.currPlayer.velocity = Vector3.zero;
-				MovePlayer.Instance.currPlayer = chars [i].GetComponent<Rigidbody2D>();
-				RefreshUI ();
-			}
+		if (Input.GetKeyDown (KeyCode.E) && canSwap) {
+			var closest = camPosns.OrderBy (x => Vector2.Distance (x.position, MovePlayer.Instance.currPlayer.transform.position))
+				.First ();
+				
+			Camera.main.transform.position = closest.position;
+			MovePlayer.Instance.currPlayer.velocity = Vector3.zero;
+			MovePlayer.Instance.currPlayer = chars.Where (x => x.GetComponent<Rigidbody2D> () != MovePlayer.Instance.currPlayer)
+				.First ().GetComponent<Rigidbody2D>();
 		}
-	}
 
+	}
+	/*
 	void RefreshUI()
 	{
 		for (int i = 0; i < interactUI.Length; i++) {
@@ -54,4 +55,5 @@ public class MirrorTransfer : MonoBehaviour {
 				interactUI [i].SetActive (false);
 		}
 	}
+	*/
 }
