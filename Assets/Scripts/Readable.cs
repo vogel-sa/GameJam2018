@@ -19,6 +19,9 @@ public class Readable : MonoBehaviour {
 		col = (from x in GetComponents<CircleCollider2D> ()
 			where x.isTrigger
 			select x).First ();
+		if (!text) {
+			text = FindObjectOfType<Text>();
+		}
 	}
 
 	// Update is called once per frame
