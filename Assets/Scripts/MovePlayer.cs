@@ -20,6 +20,7 @@ public class MovePlayer : MonoBehaviour
 	private float speed = 5f;
 	[SerializeField]
 	private Rigidbody2D _currPlayer;
+
 	public Rigidbody2D currPlayer
 	{
 		get

@@ -27,7 +27,7 @@ public class Readable : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if(Input.GetKeyDown(KeyCode.E) && Vector2.Distance(MovePlayer.Instance.currPlayer.transform.position,
-			transform.position) <= col.radius * transform.localScale.x + MovePlayer.Instance.radius)
+			transform.position) <= col.radius * transform.localScale.x + MovePlayer.Instance.currPlayer.GetComponent<CircleCollider2D>().radius)
 		{
 			text.text = message;
 		}
